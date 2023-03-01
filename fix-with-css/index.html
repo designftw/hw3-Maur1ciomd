@@ -1,12 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Fix the Web with CSS!</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fix the Web with CSS!</title>
+  </head>
 
-</body>
+  <body>
+	<h1>Fix the Web with CSS!</h1>
+
+    <h1>Improvements</h1>
+    <ul>
+      <li>no6 <b>learnability with typography and consistency</b></li>
+      <ol>
+        <li><a href="https://no6.scripts.mit.edu:444/events">https://no6.scripts.mit.edu:444/events</a> </li>
+
+        <li>In order to have a properly usable website you need to have good learnability. <br>
+			 The number 6 events page is the opposite of this because there are no good <br>
+			distinctions between all the elements. You should be able to scan quickly <br>
+			in order to find what you are looking for. I am adding different size text and bolding <br>
+			critical elements such as the title and event headings. Arguably the most important element <br>
+			on the page is the top paragraph, but it meshes with all the other text. I am adding colored <br>
+			text to help scannability and using the organization themed colors to help with the overall theme of the page. <br>
+			This is also designed to start helping build consistency for the organizations colors <br>
+			<br>
+
+			<section>
+
+			<img src="../images/6before.png" alt="before photo number 6"
+			width="500"
+			height="400">
+			<img src="../images/6after.png" alt="after photo number 6"
+			width="500"
+			height="400">
+		</section>
+			</li>
+
+        <li>body > div.wrapper > ul > li{
+			text-decoration: underline;
+			list-style-type:none    ;
+			font-style: italic;
+			margin-bottom: 1em;
+			color: #0095ff
+				
+		 }
+		 
+		 #title{
+			 font-weight:bold;
+		 
+		 }
+		 
+		 
+		 body > div.wrapper > p:nth-child(3){
+			 color:#838a058f
+		 }
+		 </li>
+
+      </ol>
+	  <li>websis <b>efficiency (usability) </b></li>
+      <ol>
+		  <li><a href="http://websis.mit.edu/">http://websis.mit.edu/</a> </b></li>
+		  <li>
+			I want to be able to quickly navigate this page without thinking, <br>
+			 but everytime I open this on my computer and even worse on my phone <br>
+			 I click on the wrong thing. I am adding extra padding to prevent this <br>
+			 and improve the efficiency of the website helping usability. This is also<br>
+			 in line with the lecture on naviation speed and efficiency. <br>
+			 <br>
+		  </li>
+
+		<section>
+			<img src="../images/websisbefore.png" alt="before photo websis"
+			width="500"
+			height="400">
+			<img src="../images/websisafter.png" alt="after photo websis"
+			width="500"
+			height="400">
+		</section>  
+        <li>#table  tr > td{
+			padding-bottom: 1em;
+		}
+		</li>
+      </ol>
+
+      <li>Goandestrek graphic improvement - <b>contrast/visiblity and safety(usability) issue</b></li>
+
+      <ol>
+        <li> <a href="https://goandestrek.com/">https://goandestrek.com/</a> </li>
+        <li>Depending on what browser you use you may or may not be able (firefox) to see the text which can lead to a safety issue <br>
+		because your audience might not know what to do or what to input. I am adding a background color to the <br>
+		search form to make it more visible and easier to read regardless of the browser. This is a classic safety issue for  a company  <br>
+		like this because this could easily cause a quick searching customer to leave the site leading to loss of sales. <br>	
+	</li>
+
+		<section>
+			<img src="../images/andesbefore.png" alt="before photo goandestrek"
+			width="500"
+			height="400">
+			<img src="../images/andesafter.png" alt="after photo goandestrek"
+			width="500"
+			height="400">
+
+		</section>
+        <li>#s{
+			color:#101010
+			}
+			
+			#search-4{
+				background-color:#d3d2d2;
+				color:#100f0f
+			}
+			
+			#slide-menu-container{
+				background-color:grey
+				
+			}
+			
+			
+			#search-4 > header > h1{
+				padding: 1em
+			}</li>
+      </ol>
+
+      <li>
+        Berkshire Hathway graphic improvement - <b>Simplicity and visibility</b>
+
+        <ol >
+          <li>
+			<a href="https://berkshirehathaway.com/">https://berkshirehathaway.com/</a>
+          </li>
+          <li>
+			It appears as though the style berkshire is going for is simplicity but,<br>
+			I do not believe they are achieving that due to small but accumuating design<br>
+			issues. There are multiple colors that are popping up for no strong reason  <br>
+			throwing off the consistency and simplicity of the site. The actual name of the company <br>
+			is not the easiest or strongly pronouned element due to it blending in. <br>
+			In order to help the website I recuded the colors used, added a hover button to links <br>
+			to provide the user feedback, and increase the font size of comapny name to <br>
+			improve visibility. <br>
+			
+
+			<br>
+		  </li>
+
+		<section>
+			<img src="../images/berkbefore.png" alt="before photo berkshire"
+			width="500"
+			height="400">
+			<img src="../images/berkafter.png" alt="after photo berkshire"
+			width="500"
+			height="400">
+		</section>
+
+          <li>body > p:nth-child(2) > b:nth-child(1) > font:nth-child(1){
+			font-size: 60px
+		}
+		
+		body > p:nth-child(2) > b:nth-child(1) > font:nth-child(2){
+			font-size: 30px
+		}
+		
+		body > p:nth-child(2) > b:nth-child(1) > font:nth-child(3){
+			font-size:60px
+		}
+		
+		body > p:nth-child(2) > b:nth-child(1) > font:nth-child(4){
+			font-size:30px
+		}
+		
+		a{
+			color:black
+		}
+		
+		a:hover{
+			color:blue
+		}
+		
+		a:active{
+			box-shadow: 2px 2px 5px #fc894d; 
+		}</li>
+        </ol>
+      </li>
+
+      <li>Craigslist graphic improvement - <b>typography and affordance</b></li>
+
+      <ol>
+        <li> <a href="https://boston.craigslist.org/">https://boston.craigslist.org/</a> </li>
+        <li>
+			The original website for craigslist looks all the same size and color which is terrible <br>
+			for usability (efficiency) because you're not easily and quickly able to tell what to text <br>
+			since everything is the same its hard to tell what buttons are the ones you want and what <br>
+			they will do. For this reason I changed the color of the text and the size of the text to <br>
+			help it stick out to audience and i stayed in line with craiglist color scheme for consitency <br>
+
+			<br>
+		</li>
+
+		<section>
+
+			<img src="../images/craigbefore.png" alt="before photo craigslist"
+			width="500"
+			height="400">
+			<img src="../images/craigafter.png" alt="after photo craigslist"
+			width="500"
+			height="400">
+		</section>
+
+        <li>
+			#logo > a:nth-child(1){
+				color:purple;
+				font-weight:bold;
+				font-size:40px;
+			}
+			
+			
+			html.js.canvas.draggable.fileAPI.geolocation.matchMedia.picture.pushState.placeholder.no-touchCapable.transitions.cl-not-small-device.cl-landscape.cl-home-page body.homepage.en.bd-can-hover.desktop.w1024.regular div.wrapper section.page-container div#leftbar.leftbar ul#postlks li a#post{
+				   background-color:#effe84;
+				font-size:20px; 
+			}
+			
+			#postlks > li:nth-child(2) > a:nth-child(1){
+				text-decoration:underline;
+				font-style:italic
+			}
+			
+			html.js.canvas.draggable.fileAPI.geolocation.matchMedia.picture.pushState.placeholder.no-touchCapable.transitions.cl-not-small-device.cl-landscape.cl-home-page body.homepage.en.bd-can-hover.desktop.w1024.regular div.wrapper section.page-container nav#topban.regular div.regular-area h2.area div.cl-location-picker-homepage-link a.cl-location-picker-link{
+				font-size: 36px;
+				color:black;
+				font-weight:bold;
+			}
+		</li>
+      </ol>
+
+      <li>Yale School of art graphic improvement - <b>grouping/contrast/simplifiy for learnability</b></li>
+      <ol>
+        <li> <a href="https://www.art.yale.edu/">https://www.art.yale.edu/</a></li>
+        <li>Added pink boxes around all crucial navigation components on  the website. <br>
+		This helps readers know what's important on the site and reduce cognitive load <br>
+		cause beforehand the background made it hard to focus and the important elements had no consistency. <br>
+		These adjustments are meant to help make the sight more easily learnable and as a result usable</li>
+		<br>
+
+
+		<section>
+
+			<img src="../images/yalebefore.png" alt="before photo yale"
+			width="500"
+			height="400">
+			<img src="../images/yaleafter.png" alt="after photo yale"
+			width="500"
+			height="400">
+
+		</section>
+
+        <li>
+          .backgrounds__pattern{ background: white; } .title-module
+          .page-title--prominence-2 span { background-image: none; } #sidebar >
+          nav > ul { background: pink; text-decoration: underline; } #sidebar >
+          section.economy-footer > div > div.economy-footer__economy-links {
+          background: pink; text-decoration: underline white; } #mmi-26781 >
+          details > summary{ background:pink; text-decoration: underline; }
+        </li>
+      </ol>
+    </ul>
+  </body>
 </html>

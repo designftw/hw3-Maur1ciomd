@@ -10,9 +10,122 @@
 
 <div id="app">
 	<!-- Replace hw3-starter below with your repo name (hw3-yourusername) so you can save!  -->
-	<ma-data v-model="expenses" src="https://github.com/designftw/hw3-starter/expenses/data.json"></ma-data>
+	<ma-data v-model="expenses" src="https://github.com/designftw/hw3-Maur1ciomd/blob/master/expenses/data.json"></ma-data>
 
 	<!-- App UI here -->
+
+	<div v-if="expenses.user">
+		Logged in as {{ expenses.user?.username }}
+		<button @click="expenses.save()">Save</button>
+		<button @click="expenses.logout()">Logout</button>
+	</div>
+	<button v-else @click="expenses.login()">Login</button>
+
+	<!-- App UI here -->
+	<div style="text-align: center; margin: auto;">
+		<h2 v-if="total_balance > 0">
+			Neo owes <b>{{total_balance}}</b>
+		</h2>
+		<h2 v-else-if="total_balance < 0">
+			Trinity owes <b>{{-total_balance}}</b>
+		</h2>
+		<h2 v-else>
+			No balance
+		</h2>
+	</div>
+
+	<section >
+
+		<table style="margin: auto;margin-top: 2%;">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Title</th>
+					<th>Trinity Paid (Joint 50/50)</th>
+					<th>Neo Paid (Joint 50/50)</th>
+					<th>Trinity Paid for Neo</th>
+					<th>Neo Paid for Trinity</th>
+					<th>Currency</th>
+					
+				</tr>
+
+				<tbody>
+					<tr>
+						<td><input type="date" v-model="my.date"></td>
+						<td><input type="text" v-model="my.title"></td>
+						<td><input type="number" v-model="my.trinity_paid"></td>
+						<td><input type="number" v-model="my.neo_paid"></td>
+						<td><input type="number" v-model="my.trinity_paid_for_neo"></td>
+						<td><input type="number" v-model="my.neo_paid_for_trinity"></td>
+						<td>
+
+							<select v-model="my.currency" id="currency">
+								<option value="USD">dollar</option>
+								<option value="EUR">euro</option>
+							  <option value="GBP">pounds</option>
+
+
+							</select>
+						</td>
+					</tr>
+				</tbody>
+				<!-- how to add a button to add a new row -->
+				
+				
+
+
+			</thead>
+
+			
+		</table>
+
+		<div style="text-align: center; ">
+			<button id="top" @click="additem()">add expense</button>
+			<button id="top" @click="expenses.save()">save expenses</button>
+			<button id="top" @click="undo()">undo</button>
+		</div>
+
+		
+
+		<div style="text-align: center; margin: auto;">
+			<h2>
+				historical expenses
+			</h2>
+		</div>
+
+		<table style="margin: auto; text-align: center; margin-top: 2% ; ">
+			<thead>
+				<tr>
+					<th>Date</th>
+					<th>Title</th>
+					<th>Trinity Paid (Joint) </th>
+					<th>Neo Paid (Joint)</th>
+					<th>Trinity Paid for Neo</th>
+					<th>Neo Paid for Trinity</th>
+					<th>delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr v-for="(expense,i) in expenses">
+					<td>{{ expense.date }}</td>
+					<td>{{ expense.title }}</td>
+					<td>{{ currencyConvert(expense.currency ?? "USD","USD",expense.trinity_paid) }}</td>
+					<td>{{ currencyConvert(expense.currency ?? "USD","USD",expense.neo_paid) }}</td>
+					<td>{{ currencyConvert(expense.currency ?? "USD","USD",expense.trinity_paid_for_neo) }}</td>
+					<td>{{ currencyConvert(expense.currency ?? "USD","USD",expense.neo_paid_for_trinity) }}</td>
+					<td><button id="delete" @click="deleteitem(i)">delete</button></td>
+					
+					
+				</tr>
+			</tbody>
+	
+	
+		</table>
+	
+	</section>
+
+
+
 
 	<!-- Delete this line when you write your actual UI -->
 	{{ expenses.length }} expenses loaded.
