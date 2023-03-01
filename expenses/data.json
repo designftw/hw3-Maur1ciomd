@@ -1,13 +1,24 @@
 [
 	{
-		"title": "2"
+		"date": "2023-02-28",
+		"title": "actual expense",
+		"trinity_paid": 1000,
+		"neo_paid": 0,
+		"trinity_paid_for_neo": 0,
+		"neo_paid_for_trinity": 0,
+		"currency": "USD"
 	},
 	{
-		"title": "test",
-		"trinity_paid": 10000,
-		"neo_paid": 10,
-		"trinity_paid_for_neo": 10,
-		"neo_paid_for_trinity": 10
+		"title": "actual expense 2 ",
+		"date": "2023-02-01",
+		"neo_paid": 1005,
+		"currency": "GBP"
+	},
+	{
+		"date": "2022-01-20",
+		"title": "actual expense 3",
+		"trinity_paid_for_neo": 200,
+		"currency": "USD"
 	},
 	{
 		"title": "Rent, Sept 2020",
